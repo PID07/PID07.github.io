@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coanda 1910
+* source:	https://sketchfab.com/3d-models/coanda-1910-a26aeea9cb6847c7b3333d8dd602764c
+* author:	helijah (https://sketchfab.com/helijah)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coanda 1910" (https://sketchfab.com/3d-models/coanda-1910-a26aeea9cb6847c7b3333d8dd602764c) by helijah (https://sketchfab.com/helijah) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

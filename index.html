@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henri Coandă</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".parte")
+    const element = document.querySelectorAll("#anim")
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = "intrare 1.5s 0.2s ease forwards"; // Aplică animația
+                observer.unobserve(entry.target); // Oprește observarea după pornirea animației
+            }
+        });
+    }, {
+        threshold: 0.5 // Detectează când cel puțin 50% din element este vizibil
+    });
+    element.forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el)); // Observă fiecare element
+});
+/* Pentru bara navigatie */
+var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("nav").style.top = "0";
+      } else {
+        document.getElementById("nav").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+    </script>
+</head>
+<body>
+    <div class="meniu" id="nav">
+        <a href="index.html">Despre</a>
+        <a href="#">Efectul Coandă</a>
+        <a href="avion.html">Avionul</a>
+    </div>
+    <div class="parte" id="top">
+        <div class="titlu_subtitlu" id="anim">
+            <h1>Henri Coandă: Pionierul Aviației Românești</h1>
+            <h4>Descoperiți viața și realizările lui Henri Coandă, un geniu român care a revoluționat aviația și ingineria cu invențiile sale inovatoare.</h4>
+        </div>
+        <div class="imagine" id="anim"><img src="coanda.png"></div>
+    </div>
+
+
+    <div class="parte" id="infos">
+        <div class="titlu" id="anim">
+            <h1>Viața și Geniul lui Henri Coandă</h1>
+        </div>
+        <div class="info_lista" id="anim">
+            <div class="sectiune">
+               <h3>Repere biografice</h3> 
+               <ul>
+                <li>Nascut: 7 iunie 1886, București</li>
+                <li>Deces: 25 noiembrie 1972, București</li>
+                <li>Studii: Școala Militară, Universitatea din Liège, École Supérieure d'Aéronautique et de Construction Mécanique</li>
+               </ul>
+            </div>
+            <div class="sectiune">
+                <h3>Context istoric</h3> 
+                <p>Henri Coandă a trăit într-o perioadă de avânt a aviației, la începutul secolului al XX-lea. Interesul său timpuriu pentru aerodinamică l-a determinat să creeze invenții revoluționare.</p>
+             </div>
+        </div>
+    </div>
+
+
+    <div class="parte" id="anim">
+        <div class="titlu" id="anim">
+            <h1>Avionul Coandă-1910: O Invenție Revoluționară</h1>
+        </div>
+        <div class="info_lista" id="anim"></div>
+        <div class="sectiune_patrat" id="anim">
+            <h3>Descriere</h3> 
+            <p>Primul avion cu reacție din lume (deși discutabil), prezentat la Salonul de Aeronautică de la Paris în 1910.</p>
+         </div>
+         <div class="sectiune_patrat" id="anim">
+            <h3>Motorul</h3> 
+            <p>Un motor cu piston antrena un compresor pentru a genera un flux de aer.</p>
+         </div>
+         <div class="sectiune_patrat" id="anim">
+            <h3>Limitări</h3> 
+            <p>Dificultăți în controlul zborului și lipsa unei propulsii directe au împiedicat aplicarea imediată a conceptului inovator.
+            </p>
+         </div>
+        </div>
+    </div>
+    <div class="parte" id="anim">
+        <div class="titlu_subtitlu" id="anim">
+            <h1>Efectul Coandă: Un Fenomen Aerodinamic</h1>
+            <div class="lista_ord">
+                <div class="poza_text"id="anim"><img src="img/arrow.png">
+                    <div class="text"><h5>Explicație</h5>
+                    <p>Tendința unui jet de fluid (aer sau apă) de a urma o suprafață curbă adiacentă.</p>
+                </div></div>
+                <div class="poza_text" id="anim"><img src="img/arrow.png">
+                    <div class=text><h5>Descoperire</h5>
+                    <p>Observată de Coandă în timpul testelor cu avionul său în 1910.</p>
+                </div></div>
+                <div class="poza_text" id="anim"><img src="img/arrow.png">
+                    <div class=text><h5>Aplicații</h5>
+                    <p>Aripile avioanelor, sistemele de propulsie, aspiratoarele, și pulverizatoarele utilizează acest efect.</p>
+                </div></div>
+            </div>
+        </div>
+        <div class="imagine"><img src="efect.gif"></div>
+    </div>
+
+    <div class="parte" id="anim">
+        <div class="titlu_subtitlu" id="lat">
+            <h1>Aplicații Practice ale Efectului Coandă</h1>
+            <div class="lista_ord" id="anim">
+                <div class="poza_text" id="anim"><img src="img/avion.png">
+                    <div class=text><h5>Aeronautică</h5>
+                    <p>Proiectarea aripilor și a sistemelor de control al zborului.</p>
+                </div></div>
+                <div class="poza_text" id="anim"><img src="img/apa.png">
+                    <div class=text><h5>Inginerie fluidelor</h5>
+                    <p>Pompe, mixere și alte dispozitive.</p>
+                </div></div>
+                <div class="poza_text" id="anim"><img src="img/medicine.svg">
+                    <div class=text><h5>Medicină</h5>
+                    <p>Nebulizatoare și ventilatoare.</p>
+                </div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="parte" id="lat">
+        <div class="titlu_subtitlu" id="lat">
+            <h1>Contribuțiile lui Henri Coandă</h1>
+            <div class="timeline" id="anim">
+            <div class="linie"></div>
+            <div class="numar" id="unu">1</div>
+            <div class="liniuta" id="unul"></div>
+
+            <div class="numar" id="doi">2</div>
+            <div class="liniuta" id="doua"></div>
+
+            <div class="numar" id="trei">3</div>
+            <div class="liniuta"  id="treia"></div>
+            <div class="text_tl" id="c"><h3>Recunoaștere</h3>
+                <p>Premii și distincții internaționale.</p></div>
+            <div class="text_tl" id="a"><h3>Invenții</h3>
+                <p>Sisteme de direcție, materiale noi, și tehnici de construcție.
+                </p></div>
+            <div class="text_tl" id="b"><h3>Brevete</h3>
+                <p>Peste 120 de brevete în diverse domenii.</p></div>
+               
+        </div>
+    </div>
+</div>
+<a href="#top" class="buton">🔼</a>
+<div class="parte" id="jos">
+    <marquee scrollamount="5" direction="right">&copy; Popescu Ion Dumitru, Colegiul Național Militar "Tudor Vladimirescu"</marquee>
+</div>
+</body>
+</html>
