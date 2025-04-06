@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henri Coandă</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".parte")
+    const element = document.querySelectorAll("#anim")
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = "intrare 1.5s 0.2s ease forwards"; // Aplică animația
+                observer.unobserve(entry.target); // Oprește observarea după pornirea animației
+            }
+        });
+    }, {
+        threshold: 0.5 // Detectează când cel puțin 50% din element este vizibil
+    });
+    element.forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el)); // Observă fiecare element
+});
+/* Pentru bara navigatie */
+var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("nav").style.top = "0";
+      } else {
+        document.getElementById("nav").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+    </script>
+</head>
+<body>
+    <div class="meniu" id="nav">
+        <a href="index.html">Despre</a>
+        <a href="#">Efectul Coandă</a>
+        <a href="avion.html">Avionul</a>
+    </div>
+    <div class="container" id="anim">
+        <video src="img/efect.mp4" controls id="anim"></video>
+        <div class="content" id="anim">
+            <h2>Ce este efectul Coandă?</h2>
+            <p>
+                Efectul Coandă este un fenomen fizic care descrie tendința unui jet de fluid (cum ar fi aerul sau apa) 
+                de a urma conturul unei suprafețe curbate, în loc să se deplaseze în linie dreaptă. 
+                Acest efect a fost descoperit și studiat de Henri Coandă, un pionier al aviației și inventator român.
+            </p>
+            <p>
+                Efectul Coandă este utilizat în numeroase aplicații practice, inclusiv în proiectarea avioanelor, 
+                vehiculelor aerodinamice și chiar în dispozitivele medicale. Este un principiu fundamental în 
+                înțelegerea modului în care fluidele interacționează cu suprafețele solide.
+            </p>
+        </div>
+    </div>
+    <div class="extra-info">
+        <h2>Contribuția efectului Coandă în aviație</h2>
+        <div class="info-section">
+            <div class="text-section">
+                <p>
+                    Henri Coandă a fost primul care a observat și a studiat acest fenomen, aplicându-l în proiectarea primului avion cu reacție din lume, Coandă-1910. 
+                    Efectul Coandă este utilizat în aviație pentru a îmbunătăți portanța aripilor și pentru a controla fluxul de aer în jurul aeronavelor.
+                </p>
+                <p>
+                    De asemenea, acest principiu este folosit în proiectarea motoarelor cu reacție și a altor sisteme aerodinamice, contribuind la eficiența și stabilitatea zborului.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="img/Slats_and_flaps-removebg-preview.png" alt="Coandă-1910" />
+                
+            </div>
+        </div>
+    </div>
+    <div class="extra-info">
+        <h2>Contribuția efectului Coandă în automobile</h2>
+        <div class="info-section">
+            <div class="image-section">
+                <img src="img/image-removebg-preview (1).png" alt="masini" />
+            </div>
+            <div class="text-section">
+                <p>
+                    Efectul Coandă este utilizat și în industria automobilelor pentru a îmbunătăți aerodinamica vehiculelor. 
+                    Prin aplicarea acestui principiu, designerii auto pot controla fluxul de aer în jurul caroseriei, 
+                    reducând rezistența la înaintare și îmbunătățind eficiența consumului de combustibil.
+                </p>
+                <p>
+                    De asemenea, efectul Coandă este folosit în proiectarea sistemelor de răcire și a componentelor aerodinamice, 
+                    cum ar fi spoilerele și difuzoarele, pentru a crește stabilitatea și performanța vehiculelor la viteze mari.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
