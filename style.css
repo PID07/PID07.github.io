@@ -407,13 +407,6 @@ p {
     }
 }
 
-/* Stilizare pentru alinierea elementelor din div-uri */
-div {
-    display: flex;
-    flex-direction: column; /* Aliniere pe verticală */
-    justify-content: space-evenly; /* Spațiere uniformă pe verticală */
-    align-items: center; /* Centrare pe orizontală */
-}
 
 /* Stilizare specifică pentru container */
 .container {
