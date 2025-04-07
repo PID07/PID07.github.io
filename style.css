@@ -415,8 +415,14 @@ p {
     flex-direction: row; /* Aliniere pe orizontală pentru conținut */
     justify-content: space-evenly; /* Spațiere uniformă pe orizontală */
     align-items: center; /* Centrare pe verticală */
-    width: 100%;
+    width: 90%;
+    margin-left:5%;
     margin-top: 50px;
+}
+.content{
+    background-image: linear-gradient(to left, blue, purple);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Stilizare pentru secțiunile extra-info */
