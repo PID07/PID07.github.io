@@ -10,10 +10,12 @@
   }
   
   #heading {
-    position: fixed;
-    width: 100%;
-    padding: 32px;
-  }
+  position: fixed;
+  top:0;
+  min-width:93%;
+  max-width: 95%;
+  padding: 32px;
+}
   
   .border {
     background: linear-gradient(90deg, gray, 90%, black);
