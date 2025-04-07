@@ -250,7 +250,7 @@ h3{
         font-size:3rem;
         z-index:1000;
     }
-    @media (width <= 700px) {
+    @media (width <= 768px) {
         .linie, .liniuta, .numar{
             display: none;
         }
@@ -271,12 +271,16 @@ h3{
         #a, #b, #c{
             position: static;
             transform: none;
+            transform: translateX(15%);
         }
         .buton{
             position: fixed;
             top:88%;
             left:90%;
             font-size: 2rem;
+        }
+        .parte{
+            padding:20px;
         }
     }
 
